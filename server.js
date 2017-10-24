@@ -1,7 +1,7 @@
 var http 		    = require('http');
 var qs 			    = require('querystring');
 var cls 		    = require('./controllers');
-var serverPort 	= 8124;
+var serverPort 	= 8080;
 var url         = require('url');
 
 ///////////////////////////////////////////   DATA CREATION FUNCTIONS /////////////////////////////////////////////////////////////////////////
