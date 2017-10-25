@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 //var url = "mongodb://localhost:27017/mydb";
-var url = process.env.MONGODB_URI;
+var url = "mongodb://r1:r1@ds231245.mlab.com:31245/onlinestore-rishabh";
 
 const cls = module.exports;
 
