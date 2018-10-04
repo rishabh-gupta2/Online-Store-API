@@ -312,16 +312,16 @@ function isArrayOfInts(str) {
 }
 
 function isValidMode(str) {
-  if(str === "paytm" || str === "cash" || str === "credit card" || str === "debit card")
+  if(str === "paytm" || str === "cash" || str === "credit card" || str === "debit card" || str == "online_others")
     return true;
   else
     return false;
 }
 
 function isJsonString(str) {
-    if (str == null)
-      return false;
     try {
+	if (str == null)
+		return false;
       return JSON.parse(str);
     } catch (e) {
         return false;
