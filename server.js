@@ -290,16 +290,17 @@ var addApiKeys = function () {
 ////////////////////////////////////////    HELPER FUNCTIONS         ///////////////////////////////////////////////////////////////////////
 
 function isArrayOfInts(str) {
-  if(str == null)
+  if(str == null) {
       return false;
+  }
   var arr = str.trim().split("[");
-  if (arr.length != 2)
+  if (arr.length != 2) {
     return false;
-  else{
+  } else {
     arr = arr[1].trim().split("]");
-    if(arr.length != 2)
+    if(arr.length != 2) {
       return false;
-    else{
+    } else {
       arr = arr[0].trim().split(",");
       for (var i=0; i<arr.length; i++){
         arr[i] = parseInt(arr[i].trim());
@@ -312,10 +313,7 @@ function isArrayOfInts(str) {
 }
 
 function isValidMode(str) {
-  if(str === "paytm" || str === "cash" || str === "credit card" || str === "debit card" || str == "online_others")
-    return true;
-  else
-    return false;
+  return (str === "paytm" || str === "cash" || str === "credit card" || str === "debit card" || str == "online_others");
 }
 
 function isJsonString(str) {
